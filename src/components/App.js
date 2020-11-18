@@ -14,8 +14,8 @@ const App = () => {
     <Router history={customHistory}>
       <div>
         <Switch>
-          <Route exact path="/" component={SearchForm} />
-          <Route exact path="/user" component={User} />
+          <Route exact path="/github-search/" component={SearchForm} />
+          <Route exact path="/github-search/user" component={User} />
           {/* <Route exact path="/repo" component={Repo} /> */}
         </Switch>
       </div>
