@@ -11,6 +11,15 @@ const config = {
   output: {
     filename: 'static/[name].[hash].js',
   },
+  resolve: {
+    alias: {
+      "api": `${commonPaths.appEntry}/api/`
+    },
+    extensions: [
+      '.js',
+      '.jsx'
+    ],
+  },
   devtool: 'source-map',
   module: {
     rules: [

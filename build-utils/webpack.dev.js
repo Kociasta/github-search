@@ -15,7 +15,12 @@ const config = {
   resolve: {
     alias: {
       "react-dom": "@hot-loader/react-dom",
+      "api": `${commonPaths.appEntry}/api/`
     },
+    extensions: [
+      '.js',
+      '.jsx'
+    ],
   },
   devtool: "inline-source-map",
   module: {
