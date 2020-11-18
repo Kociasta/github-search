@@ -9,7 +9,8 @@ const config = {
     app: [`${commonPaths.appEntry}/index.js`],
   },
   output: {
-    filename: `[name].[hash].js`,
+    filename: 'static/[name].[hash].js',
+    publicPath: '/github-search/'
   },
   resolve: {
     alias: {
@@ -65,7 +66,7 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
+      filename: 'styles/[name].[hash].css',
     }),
   ],
 };
