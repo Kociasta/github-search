@@ -9,7 +9,7 @@ const config = {
     app: [`${commonPaths.appEntry}/index.js`],
   },
   output: {
-    filename: 'static/[name].[hash].js',
+    filename: `[name].[hash].js`,
   },
   resolve: {
     alias: {
@@ -65,7 +65,7 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[hash].css',
+      filename: '[name].[hash].css',
     }),
   ],
 };
