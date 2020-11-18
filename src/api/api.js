@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-const api = axios.create({
+export const api = axios.create({
   baseURL: "https://api.github.com",
   // paramsSerializer: (params) => {
   //   return qs.stringify(params, {arrayFormat: 'repeat'});
   // }
 });
 
-export default api;
+const isLocalhost = window.location.hostname === 'localhost';
+export const pathName = isLocalhost ? '' : '/github-search';

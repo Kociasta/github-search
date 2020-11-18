@@ -4,13 +4,7 @@ import { getUser } from './requests.js';
 
 // import {Layout} from './Layout.js';
 
-const SearchForm = () => {
-
-  console.log('test', getUser);
-  useEffect(() => {
-    getUser('Kociasta')
-  },[])
-
+const Repos = () => {
   return (
     <div>
       <h1>SEARCH Page</h1>
@@ -19,4 +13,4 @@ const SearchForm = () => {
   );
 };
 
-export default SearchForm;
+export default Repos;
