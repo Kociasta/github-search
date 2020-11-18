@@ -25,7 +25,6 @@ const config = {
             options: {
               modules: true,
               importLoaders: 1,
-              localsConvention: 'camelCase',
               sourceMap: true,
             },
           },
@@ -38,14 +37,14 @@ const config = {
         test: /\.less$/,
         use: [
           {
-            loader: "style-loader"
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: "css-loader",
             options: {
               sourceMap: true,
-              modules: true,
-              localIdentName: "[local]___[hash:base64:5]",
+              modules: false,
+              importLoaders: 1,
             }
           },
           {

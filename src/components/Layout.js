@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import style from './layout.less';
+// import './layout.less';
 
 const Layout = ({ children }) => {
 
-  console.log(style)
   return (
-    <div className={style.container}>
+    <div className="container">
       <Link to="/">
-        <div className={style.logo}>
+        <div className="logo">
           <span>LOGO</span>
         </div>
       </Link>
@@ -17,7 +16,7 @@ const Layout = ({ children }) => {
       <br />
       <br />
       <br />
-      <p className={style.footer}>
+      <p className="footer">
         Made with love
       </p>
     </div>
