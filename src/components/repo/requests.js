@@ -1,3 +1,3 @@
 import { api } from 'api/api';
 
-export const getUser = (username) => api.get(`users/${username}`);
+export const getRepo = (username, repo) => api.get(`repos/${username}/${repo}/commits`);

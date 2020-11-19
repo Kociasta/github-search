@@ -15,7 +15,8 @@ const config = {
   resolve: {
     alias: {
       "react-dom": "@hot-loader/react-dom",
-      "api": `${commonPaths.appEntry}/api/`
+      "api": `${commonPaths.appEntry}/api/`,
+      "theme": `${commonPaths.appEntry}/theme/`
     },
     extensions: [
       '.js',

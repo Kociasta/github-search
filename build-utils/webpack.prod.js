@@ -14,7 +14,8 @@ const config = {
   },
   resolve: {
     alias: {
-      "api": `${commonPaths.appEntry}/api/`
+      "api": `${commonPaths.appEntry}/api/`,
+      "theme": `${commonPaths.appEntry}/theme/`
     },
     extensions: [
       '.js',
