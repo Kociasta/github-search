@@ -1,0 +1,19 @@
+
+.table {
+  .table__row--color {
+    &:nth-child(even) {
+      background-color: @color-main-light;
+    }
+  }
+}
+
+.table__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+}
+
+.table__row--underline {
+  border-bottom: @border-thin;
+}
+

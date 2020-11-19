@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <div className="layout__footer">
-        <Link to="https://github.com/Kociasta" className="button--light">Made by Kociasta</Link>
+        <a href="https://github.com/Kociasta" alt="github kociasta" className="button--light">Made by Kociasta</a>
       </div>
     </div>
   );

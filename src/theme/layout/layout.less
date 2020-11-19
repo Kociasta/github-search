@@ -28,6 +28,44 @@ body {
   padding: 0;
 }
 
+.container {
+  display: flex;
+}
+
+.container__aside {
+  flex-basis: 30%;
+  min-width: 150px;
+}
+
+.container__main {
+  flex-basis: 70%;
+}
+
+.img(@img-w: 150px; @img-h: 150px) {
+  width: @img-w;
+  height: @img-h;
+  background-color: @color-main;
+}
+
+.img--rounded {
+  .img();
+  border-radius: 50%;
+}
+
+.text{
+  font-size: 1rem;
+}
+
+.text--h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  // font-weight: 500;
+}
+
+.text--light {
+  color: @color-font-light;
+}
+
 .layout {
   margin: 0 auto;
   padding: 2rem;

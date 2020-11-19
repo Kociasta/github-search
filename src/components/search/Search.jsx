@@ -46,7 +46,7 @@ const Search = () => {
     <div>
       <Title title="Search" />
       <div className="form">
-        <div className="form__field">
+        <div className="form__field" onKeyDown={({key}) => key === 'Enter' && checkUserAndGo() }>
           <input
             className="form__textfield"
             type="text"
@@ -60,7 +60,7 @@ const Search = () => {
             onClick={ () => checkUserAndGo() }
             disabled={!isUsernameValid}
           >
-            Go
+            Search
           </button>
         </div>
         { error &&
