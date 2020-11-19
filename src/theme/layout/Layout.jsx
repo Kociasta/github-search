@@ -9,14 +9,14 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <div className="layout__header">
-        <Link to={`${pathName}/search`} className="button--light">Search</Link>
-        <Link to={`${pathName}/about`} className="button--light">About</Link>
+        <Link to={`${pathName}/search`} className="link--light">Search</Link>
+        <Link to={`${pathName}/about`} className="link--light">About</Link>
       </div>
       <div className="layout__content">
         {children}
       </div>
       <div className="layout__footer">
-        <a href="https://github.com/Kociasta" alt="github kociasta" className="button--light">Made by Kociasta</a>
+        <a href="https://github.com/Kociasta" alt="github kociasta" className="link--light">Made by Kociasta</a>
       </div>
     </div>
   );

@@ -8,8 +8,8 @@ import Table from 'theme/table/Table';
 
 
 const MAX = 5;
-const nameTemplate = (name, data) => <div key={uuid()}>{data[name]}</div>;
-const actionTemplate = (name, username, pathName, data) => <Link to={`${pathName}/${username}/repos/${data[name]}`} className="button--light" key={uuid()}>Go to repo</Link>;
+const nameTemplate = (name, data, classN) => <div className={classN} key={uuid()}>{data[name]}</div>;
+const actionTemplate = (name, username, pathName, data, classN) => <Link to={`${pathName}/${username}/repos/${data[name]}`} className={`${classN} button--light`} key={uuid()}>Go to repo</Link>;
 
 
 const Repos = ({match: {params}}) => {
@@ -40,11 +40,11 @@ const Repos = ({match: {params}}) => {
   const HEADERS = [
     {
       title: 'Name',
-      template: (data) => nameTemplate('name', data)
+      template: (data, classN) => nameTemplate('name', data, classN)
     },
     {
       title: 'Action',
-      template: (data) => actionTemplate('name', username, pathName, data)
+      template: (data, classN) => actionTemplate('name', username, pathName, data, classN)
     }
   ];
 

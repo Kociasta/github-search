@@ -100,8 +100,15 @@ body {
   // border: 1px solid blue;
 }
 
-.button--light {
-  display: block;
+.link--light {
+  display: inline-block;
   text-decoration: none;
   color: @color-font;
+}
+
+.button--light {
+  .link--light();
+  border: @border-thin;
+  border-radius: @border-radius;
+  padding: 0.5rem;
 }
