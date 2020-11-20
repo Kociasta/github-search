@@ -11,7 +11,7 @@ import {
 
 const MAX = 5;
 const nameTemplate = (name, data, classN) => <div className={classN} key={uuid()}>{data[name]}</div>;
-const actionTemplate = (name, username, pathName, data, classN) => <Link to={`${pathName}/${username}/repos/${data[name]}`} className={`${classN} button--light`} key={uuid()}>Go to repo</Link>;
+const actionTemplate = (name, username, pathName, data, classN) => <Link to={`${pathName}/${username}/repos/${data[name]}`} className={`${classN} button button--light link--light`} key={uuid()}>Go to repo</Link>;
 
 
 const Repos = ({ match: { params } }) => {
@@ -60,7 +60,7 @@ const Repos = ({ match: { params } }) => {
       <Title title={`User: ${username}`} back />
       <div className="container">
         <div className="container__aside container__aside--left">
-          <img src={user?.avatar_url} alt="avatar" width="100" height="100" className="img--rounded" />
+          <img src={user?.avatar_url} alt="avatar" width="100" height="100" className="img img--rounded" />
           <div className="text--h2">{user?.name}</div>
           <div className="text--light">{user?.bio}</div>
         </div>

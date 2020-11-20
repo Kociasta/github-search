@@ -5,7 +5,7 @@ import { pathName }   from 'api/api';
 import Title          from 'theme/Title/Title';
 import { getUser }    from './requests.js';
 
-const NOT_FOUND = 'I think that there is no user with such name. Please check it again or go to GitHub';
+const NOT_FOUND = 'I think that there is no user with such name. Please check it again or go to GitHub.';
 const TEST = /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i;
 /**
  * GitHub username validation:
@@ -54,14 +54,14 @@ const Search = () => {
 
   return (
     <div>
-      <Title title="Search" />
+      <div className="text--center">Just type a username. And search.</div>
       <div className="form">
         <div
           className="form__field"
           onKeyDown={({key}) => onEnter(key)}
         >
           <input
-            className="form__textfield"
+            className="form__input"
             type="text"
             name="username"
             placeholder="type username..."
@@ -69,7 +69,7 @@ const Search = () => {
             onChange={(e) => onType(e.target.value)}
           />
           <button
-            className={cx('button--main', {'button--disabled': !isUsernameValid})}
+            className={cx('button button--main', {'button--disabled': !isUsernameValid})}
             disabled={!isUsernameValid}
             onClick={() => checkUserAndGo()}
           >
@@ -77,7 +77,7 @@ const Search = () => {
           </button>
         </div>
         {error && (
-          <div className="form__message--error">{NOT_FOUND}</div>
+          <div className="form__message form__message--error">{NOT_FOUND}</div>
         )}
       </div>
     </div>

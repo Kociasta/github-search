@@ -1,0 +1,25 @@
+@font-serif: 'Arbutus Slab', serif;
+@font-sans-serif: 'Open Sans', sans-serif;
+
+@border-massive: 2px solid @color-border-color;
+@border-thin: 1px solid @color-border-gray;
+
+@border-radius: 4px;
+
+@width-xs: 480px;
+@width-sm: 768px;
+@width-md: 1024px;
+@width-lg: 1200px;
+
+@width-aside: 150px;
+
+@container-xs: @width-xs;
+@container-sm: @width-sm;
+@container-md: @width-md;
+@container-lg: @width-lg;
+
+.screen(@maxWidth; @rules) {
+  @media only screen and (max-width: @maxWidth) {
+    @rules();
+  }
+}
