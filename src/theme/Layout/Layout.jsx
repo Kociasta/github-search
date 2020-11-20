@@ -1,11 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React        from 'react';
+import { Link }     from 'react-router-dom';
 import { pathName } from 'api/api';
 
-// import './layout.less';
 
 const Layout = ({ children }) => {
-
   return (
     <div className="layout">
       <header className="layout__header">

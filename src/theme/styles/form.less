@@ -1,0 +1,60 @@
+.placeholder(@placeholder-color) {
+  &::-webkit-input-placeholder { /* Edge */
+    color: @placeholder-color;
+  }
+
+  &::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: @placeholder-color;
+  }
+
+  &::placeholder {
+    color: @placeholder-color;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+
+  .screen(@container-sm, {
+    margin: 1rem 0;
+  });
+
+  .form__field {
+    display: flex;
+    justify-content: center;
+
+    .screen(@container-sm, {
+      flex-direction: column;
+    })
+  }
+
+  .form__input {
+    border: @border-thin;
+    line-height: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-family: @font-sans-serif;
+    border-radius: @border-radius;
+
+    .placeholder(@color-font-light);
+
+    .screen(@container-sm, {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    })
+  }
+
+  .form__message {
+    margin: 1rem 0;
+    text-align: center;
+
+  }
+
+  .form__message--error {
+    color: @color-error;
+  }
+
+}

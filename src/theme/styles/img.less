@@ -1,0 +1,14 @@
+.img(@img-w: 150px, @img-h: 150px) {
+  width: @img-w;
+  height: @img-h;
+}
+
+.img {
+  //um... this is the test use of mixin ... not sure if this is correct usage
+  .img();
+  background-color: @color-main;
+}
+
+.img--rounded {
+  border-radius: 50%;
+}

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+
+  .screen(@container-sm, {
+    flex-direction: column;
+  });
+
+  .container__aside {
+    flex-basis: 30%;
+    min-width: @width-aside;
+  }
+
+  .container__aside--left {
+    margin-right: 2rem;
+  };
+
+  .container__aside--right {
+    margin-left: 2rem;
+  }
+
+  .container__main {
+    flex-basis: 70%;
+  }
+}
+
