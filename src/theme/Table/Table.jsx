@@ -3,6 +3,7 @@ import React  from 'react';
 
 const Table = ({ title, headers, data, max }) => {
   const tableLength = max ? max : data?.length;
+  const isDataTableEmpty = data?.length === 0;
 
   return (
     <div className="table">
@@ -24,6 +25,9 @@ const Table = ({ title, headers, data, max }) => {
             )
           }
         })
+      )}
+      {isDataTableEmpty && headers && (
+        <div className="table__row table__row--empty">No data here</div>
       )}
     </div>
   );

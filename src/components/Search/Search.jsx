@@ -54,7 +54,7 @@ const Search = () => {
 
   return (
     <div>
-      <div className="text--center">Just type a username. And search.</div>
+      <div className="text--center">Just type a GitHub username. And search.</div>
       <div className="form">
         <div
           className="form__field"
