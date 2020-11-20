@@ -39,7 +39,7 @@ const Repo = ({match: {params}}) => {
 
   return (
     <div>
-      <Title title={`Repo: ${repo}`} />
+      <Title title={`Repo: ${repo}`} back />
       <div className="container">
           <Table
             title={`A list of ${repo} commits:`}

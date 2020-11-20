@@ -31,7 +31,6 @@ const Search = () => {
 
     getUser(username).then(
       ({ data }) => {
-        console.log('success :>> ', data)
         history.push(`${pathName}/${data.login}/repos`);
       },
       (error) => {
