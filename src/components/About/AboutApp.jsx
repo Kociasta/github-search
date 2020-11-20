@@ -8,13 +8,13 @@ const AboutApp = () => {
         This app is using <a href="https://developer.github.com/v3/" target="_blank" className="link">GitHub REST API v3.</a>
       </li>
       <li className="list__elem">
-        You can search for users typing a username.
+        You can search for Github users typing a username.
       </li>
       <li className="list__elem">
         If you enter the wrong username - I'll tell you.
       </li>
       <li className="list__elem">
-        When you find the user - you'll see more details and the last 5 changed repositories of him/her.
+        When you find a user - you'll see more details and the last 5 changed repositories of him/her.
       </li>
       <li className="list__elem">
         You'll also have a chance to display a list of commits from a specific repo.

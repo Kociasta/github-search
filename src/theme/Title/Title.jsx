@@ -8,7 +8,9 @@ const Title = ({ title, back = false }) => {
   return (
     <h1 className="title">
       {back && (
-        <i className="fas fa-chevron-left title__back" onClick={() => history.goBack()} />
+        <span className="title__back" onClick={() => history.goBack()}>
+          <i className="fas fa-chevron-left title__back--rotary" />
+        </span>
       )}
       {title}
     </h1>
