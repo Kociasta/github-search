@@ -10,6 +10,12 @@ body {
   flex-basis: 30%;
   min-width: 150px;
 }
+.container__aside--left {
+  margin-right: 2rem;
+}
+.container__aside--right {
+  margin-left: 2rem;
+}
 .container__main {
   flex-basis: 70%;
 }
@@ -68,8 +74,36 @@ body {
   border-radius: 4px;
   padding: 0.5rem;
 }
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: #3b3b3b;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.list .list__elem {
+  padding: 0.2rem;
+}
+.list .list__elem:first-child {
+  padding-top: 0;
+}
 .title {
   font-family: 'Arbutus Slab', serif;
+}
+.title__back {
+  margin-right: 1rem;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+.title__back:hover {
+  transform: rotate(360deg);
 }
 .form {
   display: flex;
@@ -116,19 +150,19 @@ body {
 }
 .button--main {
   display: inline-block;
+  min-width: 5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
   background: #72a6cb;
   border: none;
   border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 1.5rem;
-  min-width: 5rem;
   padding: 0.25rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
   margin: 0 1rem;
+  cursor: pointer;
 }
 .button--main:hover {
   background: #3a749d;
@@ -157,4 +191,4 @@ body {
 }
 
 
-/*# sourceMappingURL=app.ca63dc996afaa237f269.css.map*/
+/*# sourceMappingURL=app.ac7a9f08f386b70eb490.css.map*/
