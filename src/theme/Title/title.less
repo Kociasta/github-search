@@ -3,12 +3,18 @@
   font-family: @font-serif;
 
   .title__back {
-    margin-right: 1rem;
+    display: inline-block;
+    width: 4rem;
+    margin-left: -1rem;
     cursor: pointer;
-    transition-duration: 0.5s;
-    transition-property: transform;
 
-    &:hover {
+    .title__back--rotary {
+      margin-left: 1rem;
+      transition-duration: 0.5s;
+      transition-property: transform;
+    }
+
+    &:hover .title__back--rotary {
       transform: rotate(360deg);
     }
   }
