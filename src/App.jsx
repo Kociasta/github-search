@@ -1,20 +1,23 @@
-import React from 'react';
-import { Switch, BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import React        from 'react';
+import {
+  Switch,
+  BrowserRouter as Router,
+  Route,
+  Redirect
+}                   from 'react-router-dom';
 import { pathName } from 'api/api';
 
-import About from './components/about/About';
-import Search from './components/search/Search';
-import Repo from './components/repo/Repo';
-import Repos from './components/repos/Repos';
-import Layout from './theme/layout/Layout';
+import About        from './components/About/About';
+import Search       from './components/Search/Search';
+import Repo         from './components/Repo/Repo';
+import Repos        from './components/Repos/Repos';
+import Layout       from './theme/Layout/Layout';
+import Title        from './theme/Title/Title';
+
+const noSite = () => <Title title='404' />;
+
 
 const App = () => {
-  const noSite = () => {
-    return (
-      <div><h1>404</h1></div>
-    )
-  }
-
   return (
     <Router>
       <Layout>

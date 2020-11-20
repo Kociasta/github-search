@@ -72,3 +72,12 @@
     background: darken(@color-main, 20%);
   }
 }
+
+.button--disabled {
+  background: desaturate(@color-main, 40%);
+
+  &:hover {
+    background: desaturate(@color-main, 40%);
+    cursor: default;
+  }
+}
