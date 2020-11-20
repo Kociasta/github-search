@@ -1,0 +1,32 @@
+.layout {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: @width-lg;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  .screen(@container-sm, {
+    font-size: 0.85rem;
+  });
+
+  .layout__header {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    border-bottom: @border-massive;
+  }
+
+  .layout__content {
+    padding: 1rem;
+    flex: 1;
+  }
+
+  .layout__footer {
+    padding: 1rem 0;
+    border-top: @border-massive;
+    text-align: right;
+    flex: 0 0 auto;
+  }
+}

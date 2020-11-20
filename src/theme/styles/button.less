@@ -1,0 +1,53 @@
+.button {
+  padding: 0.25rem 1rem;
+  margin: 0 1rem;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: @border-radius;
+  background: @color-white;
+  color: @color-font;
+  border: @border-thin;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid darken(@color-border-gray, 20%);
+  }
+}
+
+.button--main {
+  min-width: 5rem;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  color: @color-font-white;
+  background: @color-main;
+  border: none;
+
+  &:hover {
+    border: none;
+    background: darken(@color-main, 20%);
+  }
+
+  .screen(@container-sm, {
+    margin: 0;
+    font-size: 1rem;
+  })
+}
+
+.button--disabled {
+  background: desaturate(@color-main, 40%);
+
+  &:hover {
+    border: none;
+    background: desaturate(@color-main, 40%);
+    cursor: default;
+  }
+}
+
+.button--light {
+  border: @border-thin;
+  border-radius: @border-radius;
+  padding: 0.5rem;
+}

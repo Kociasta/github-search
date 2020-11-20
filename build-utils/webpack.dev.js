@@ -15,7 +15,13 @@ const config = {
   resolve: {
     alias: {
       "react-dom": "@hot-loader/react-dom",
+      "api": `${commonPaths.appEntry}/api/`,
+      "theme": `${commonPaths.appEntry}/theme/`
     },
+    extensions: [
+      '.js',
+      '.jsx'
+    ],
   },
   devtool: "inline-source-map",
   module: {
@@ -46,7 +52,7 @@ const config = {
             loader: "css-loader",
             options: {
               sourceMap: true,
-              modules: true,
+              modules: false,
               // localIdentName: "[local]___[hash:base64:5]",
             }
           },

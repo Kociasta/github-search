@@ -1,0 +1,36 @@
+
+.table {
+  width: 100%;
+
+  .table__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .table__row--color {
+    &:nth-child(even) {
+      background-color: @color-main-light;
+    }
+  }
+
+  .table__row--underline {
+    border-bottom: @border-thin;
+  }
+
+  .table__item {
+    flex: 1 1 0;
+
+    &:last-child {
+      text-align: right;
+      flex: 0 0 auto;
+      margin-left: 2rem;
+    }
+  }
+
+  .table__item--short {
+    .screen(@container-sm, {
+      max-width: 7rem;
+    })
+  }
+}

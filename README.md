@@ -1,9 +1,16 @@
 # github search app
 
-> Test intro
+This is a simple React app for searching users on GitHub.
+
+You could test it on [https://kociasta.github.io/github-search](https://kociasta.github.io/github-search)
 
 ## Features
 
+It uses React.js with some hooks.
+
+Styles with LESS and BEM.
+
+Requests to GitHub API.
 
 ### Usage
 
@@ -16,7 +23,7 @@ $ yarn
 Run development server
 
 ```
-$ yarn dev
+$ yarn start
 ```
 
 ### Building
@@ -25,9 +32,7 @@ $ yarn dev
 $ yarn build
 ```
 
-Will create a `dist` directory containing your compiled code.
-
-Depending on your needs, you might want to do more optimization to the production build.
+Will create a `dist` directory containing compiled code.
 
 ## Boilerplate
 

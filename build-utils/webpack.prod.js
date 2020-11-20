@@ -6,10 +6,21 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const config = {
   mode: 'production',
   entry: {
-    app: [`${commonPaths.appEntry}/index.js`],
+    app: [`${commonPaths.appEntry}/index.js`]
   },
   output: {
     filename: 'static/[name].[hash].js',
+    publicPath: '/github-search/'
+  },
+  resolve: {
+    alias: {
+      "api": `${commonPaths.appEntry}/api/`,
+      "theme": `${commonPaths.appEntry}/theme/`
+    },
+    extensions: [
+      '.js',
+      '.jsx'
+    ],
   },
   devtool: 'source-map',
   module: {
@@ -25,7 +36,6 @@ const config = {
             options: {
               modules: true,
               importLoaders: 1,
-              localsConvention: 'camelCase',
               sourceMap: true,
             },
           },
@@ -38,14 +48,14 @@ const config = {
         test: /\.less$/,
         use: [
           {
-            loader: "style-loader"
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: "css-loader",
             options: {
               sourceMap: true,
-              modules: true,
-              localIdentName: "[local]___[hash:base64:5]",
+              modules: false,
+              importLoaders: 1,
             }
           },
           {
