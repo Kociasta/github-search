@@ -1,14 +1,14 @@
 # github search app
 
-This is an simple React app for searching users on GitHub.
+This is a simple React app for searching users on GitHub.
 
 You could test it on [https://kociasta.github.io/github-search](https://kociasta.github.io/github-search)
 
 ## Features
 
-It use React.js with some hooks.
+It uses React.js with some hooks.
 
-Style with LESS and BEM.
+Styles with LESS and BEM.
 
 Requests to GitHub API.
 
